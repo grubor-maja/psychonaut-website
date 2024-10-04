@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Joi from "joi";
 
 const FreeSessionSchema = mongoose.Schema({
     firstName: {
@@ -14,7 +15,7 @@ const FreeSessionSchema = mongoose.Schema({
         required: true
     },
     phone: {
-        type: Number,
+        type: String,
         required: true
     },
     date: {
@@ -27,6 +28,16 @@ const FreeSessionSchema = mongoose.Schema({
     }
 });
 
-const FreeSession = mongoose.model('FreeSession',FreeSessionSchema);
+export function validateSession(session) {
+    const schema = Joi.object({
+        firstName: Joi.string().min(2).max(255).required(),
+        lastName: Joi.string().min(2).max(255).required(),
+        email: Joi.string().min(5).max(255).required().email(),
+        phone: Joi.string().pattern(/^[0-9+\-() ]+$/).required(),
+        date: Joi.date().required()
+    });
+    return schema.validate(session);
+}
 
-export default FreeSession;
+export const FreeSession = mongoose.model('FreeSession',FreeSessionSchema);
+

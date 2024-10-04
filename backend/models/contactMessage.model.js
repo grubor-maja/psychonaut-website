@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Joi from "joi";
 
 const ContactMessageSchema = new mongoose.Schema({
     firstName:  {
@@ -23,6 +24,15 @@ const ContactMessageSchema = new mongoose.Schema({
     },
 });
 
-const ContactMessage = mongoose.model('ContactMessage',ContactMessageSchema);
+export function validateMessage(message) {
+    const schema = Joi.object({
+        firstName: Joi.string().min(2).max(255).required(),
+        lastName: Joi.string().min(2).max(255).required(),
+        email: Joi.string().min(5).max(255).required().email(),
+        message: Joi.string().max(5000)
+    });
 
-export default ContactMessage;
+    return schema.validate(message);
+}
+
+export const ContactMessage = mongoose.model('ContactMessage',ContactMessageSchema);

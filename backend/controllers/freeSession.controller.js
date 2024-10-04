@@ -22,6 +22,12 @@ export const createFreeSession = async(req,res) => {
 
         res.status(201).json({success:true, message:'Session booked successfully'});
     } catch (error) {
+        if (error.code === 11000) {
+            return res.status(400).json({
+                success: false,
+                message: 'Session already booked for this date and time'
+            });
+        }
         res.status(500).send({success: false, message: 'Server error'});
     }
 }

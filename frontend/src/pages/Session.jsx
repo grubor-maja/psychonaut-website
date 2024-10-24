@@ -38,7 +38,7 @@ function Session() {
             const sessionData = { firstName, lastName, email, phone, date, time };
             const response = await axios.post('http://localhost:5005/api/sessions', sessionData);
             toast.success(response.data.message);
-            
+
             setFirstName('');
             setLastName('');
             setEmail('');

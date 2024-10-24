@@ -16,16 +16,21 @@ function Contact() {
         e.preventDefault();
         try {
             const contactData = { firstName, lastName, email, message };
-            const response = axios.post('https://psychonaut-website.onrender.com/api/messages', contactData);
+            const response = await axios.post('/api/messages', contactData, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
             toast.success(response.data.message);
             setFirstName('');
             setLastName('');
             setEmail('');
             setMessage('');
         } catch (error) {
-            toast.error(error.response.data.message);
+            toast.error(error.response?.data?.message || "An error occurred");
         }
     };
+    
 
     return (
         <>

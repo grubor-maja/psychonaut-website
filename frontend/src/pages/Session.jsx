@@ -19,25 +19,30 @@ function Session() {
 
     useEffect(() => {
         if (date) {
-            axios.get('https://psychonaut-website.onrender.com/api/sessions')
+            axios.get('/api/sessions', {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
             .then(response => {
-                    const bookedSessions = response.data?.data ? response.data.data.filter(session => session.date === date) : [];
-                    const bookedTimes = bookedSessions.map(session => session.time);
-                    const freeTimes = availableTimes.filter(time => !bookedTimes.includes(time));
-                    setAvailableTimes(freeTimes);
-                })
-                .catch(error => {
-                    console.error("Error fetching sessions:", error);
-                });
+                const bookedSessions = response.data?.data ? response.data.data.filter(session => session.date === date) : [];
+                const bookedTimes = bookedSessions.map(session => session.time);
+                const freeTimes = availableTimes.filter(time => !bookedTimes.includes(time));
+                setAvailableTimes(freeTimes);
+            })
+            .catch(error => {
+                console.error("Error fetching sessions:", error);
+            });
         }
-    }, [date, availableTimes]);
+    }, [date]);
+    
     
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const sessionData = { firstName, lastName, email, phone, date, time };
-            const response = await axios.post('https://psychonaut-website.onrender.com/api/sessions',sessionData);
+            const response = await axios.post('/api/sessions',sessionData);
 
             toast.success(response.data.message);
 

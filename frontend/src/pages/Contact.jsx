@@ -16,7 +16,7 @@ function Contact() {
         e.preventDefault();
         try {
             const contactData = { firstName, lastName, email, message };
-            const response = await axios.post('http://localhost:5005/api/messages', contactData);
+            const response = axios.post('https://psychonaut-website.onrender.com/api/messages', contactData);
             toast.success(response.data.message);
             setFirstName('');
             setLastName('');

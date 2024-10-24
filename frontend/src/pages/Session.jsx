@@ -19,8 +19,8 @@ function Session() {
 
     useEffect(() => {
         if (date) {
-            axios.get(`http://localhost:5005/api/sessions`)
-                .then(response => {
+            axios.get('https://psychonaut-website.onrender.com/api/sessions')
+            .then(response => {
                     const bookedSessions = response.data.data.filter(session => session.date === date);
                     const bookedTimes = bookedSessions.map(session => session.time);
                     const freeTimes = availableTimes.filter(time => !bookedTimes.includes(time));
@@ -37,7 +37,8 @@ function Session() {
         e.preventDefault();
         try {
             const sessionData = { firstName, lastName, email, phone, date, time };
-            const response = await axios.post('http://localhost:5005/api/sessions', sessionData);
+            const response = await axios.post('https://psychonaut-website.onrender.com/api/sessions')
+
             toast.success(response.data.message);
 
             setFirstName('');

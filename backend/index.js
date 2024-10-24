@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+dotenv.config();
 import messageRoutes from './routes/contactMessage.route.js';
 import sessionRoutes from './routes/freeSession.route.js';
 import connectDB from './configuration/db.js';
@@ -7,7 +8,7 @@ import { FreeSession } from './models/freeSession.model.js';
 import cors from 'cors';
 import path from 'path';
 
-dotenv.config();
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;

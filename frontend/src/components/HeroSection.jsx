@@ -4,8 +4,8 @@ function HeroSection() {
     return ( <>
         <div className="hero-section">
             <div className="hero-content">
-                <h1>Heading 1</h1>
-                <p>Subheading</p>
+                <h1>Find Clarity, Healing, and Strength</h1>
+                <p>Offering a safe space to explore your thoughts, emotions, and regain control over your life.</p>
                 <button>Book a Session</button>
             </div>
         </div>

@@ -16,8 +16,8 @@ function ScrollingSection() {
   return (
     <>
     <div className="scrolling-heading">
-        I can help you in Psychoterapy and Psychology areas.<br/> Below are listed only some of topics we can work on
-    </div>
+    I can help you in <span style={{ color: 'var(--mint-green)' }}>Psychotherapy</span> and <span style={{ color: 'var(--blue-violet)' }}>Psychology</span> areas.<br/> 
+    Below are listed only some of the topics we can work on.    </div>
     <div className="scrolling-section">
       <button onClick={scrollLeft} className="scroll-btn"><FaArrowLeft style={{ color: 'var(--light-beige)' }}/></button>
       <div className="scroll-container" ref={containerRef}>

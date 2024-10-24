@@ -22,7 +22,7 @@ reverse={false}
 />
 <ImageTextSection
 title="Book a Free Consultation"
-text="Taking the first step towards improving your mental well-being can be daunting, but you're not alone. I offer a complimentary introductory session where we can discuss your concerns and explore how therapy can benefit you. Let's work together to develop a personalized approach that meets your unique needs."
+text="Taking the first step towards improving your mental well-being can be daunting, but you're not alone. I offer a complimentary introductory session where we can discuss your concerns and explore how therapy can benefit you. Let's work together to develop a personalized approach that meets your unique needs. Taking care of your mental health is one of the most important investments you can make for yourself and your future."
 buttonText="Book a Session"
 imgName="office.png"
 reverse={true}

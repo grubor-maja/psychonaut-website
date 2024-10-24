@@ -21,7 +21,7 @@ function Session() {
         if (date) {
             axios.get('https://psychonaut-website.onrender.com/api/sessions')
             .then(response => {
-                    const bookedSessions = response.data.data.filter(session => session.date === date);
+                    const bookedSessions = response.data?.data ? response.data.data.filter(session => session.date === date) : [];
                     const bookedTimes = bookedSessions.map(session => session.time);
                     const freeTimes = availableTimes.filter(time => !bookedTimes.includes(time));
                     setAvailableTimes(freeTimes);
@@ -37,7 +37,7 @@ function Session() {
         e.preventDefault();
         try {
             const sessionData = { firstName, lastName, email, phone, date, time };
-            const response = await axios.post('https://psychonaut-website.onrender.com/api/sessions')
+            const response = await axios.post('https://psychonaut-website.onrender.com/api/sessions',sessionData);
 
             toast.success(response.data.message);
 

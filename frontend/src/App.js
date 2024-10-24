@@ -5,12 +5,14 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ImageTextSection from './components/ImageTextSection';
 import HeroSection from './components/HeroSection';
+import ScrollingSection from './components/ScrollingSection';
 
 function App() {
   return (
 <>
 <Navbar/>
 <HeroSection/>
+<ScrollingSection/>
 <ImageTextSection
 title="Dr. Olivia Thompson"
 text="As a certified Cognitive Behavioral Therapist and Personal Development Coach, I specialize in helping individuals navigate life's challenges with a compassionate and professional approach. With over 10 years of experience, my goal is to empower clients to reach their fullest potential and achieve long-lasting change. Whether you're struggling with anxiety, stress, or seeking personal growth, I'm here to guide you every step of the way."

@@ -187,6 +187,9 @@ button {
   display: flex;
   align-items: center;
   padding: 4rem 2.5rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+
 }
 
 .image-text-section.reverse{
@@ -199,11 +202,15 @@ button {
 
 .text-container {
   margin-left: 2rem;
-  margin-right: 15rem;
+  margin-right: 7rem;
   text-align: left;
   align-self: flex-start;
-  width: 40rem;
+  width: 45rem;
   line-height: 1.6rem;
+}
+
+.text-container.reverse {
+  margin-left: 3.5rem;
 }
 
 .text-container h2 {
@@ -216,7 +223,7 @@ button {
 .text-container p {
   font-size: var(--font-size-body);
   color: var(--dark-navy);
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 
 }
 
@@ -293,4 +300,88 @@ button {
 
 .hero-content button:hover {
   background-color: var(--mint-green);
+}
+
+/* Scrolling Section */
+
+.scrolling-heading {
+  font-size: var(--font-size-h1);
+  color: var(--dark-navy);
+  margin: 5rem 16rem;
+  width: 40rem;
+}
+
+.scrolling-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 80%; 
+  padding: 1rem 0;
+}
+
+.scroll-item {
+  background-color: var(--dark-navy); 
+  color: var(--light-beige); 
+  padding: 1.5rem;
+  margin: 0.5rem 5rem;
+  width: 20rem;
+  min-width: 10rem;
+  border-radius: 0.8rem;
+  text-align: left;
+  flex: 0 0 auto; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease;
+}
+
+.scroll-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--light-beige);
+}
+
+.scroll-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--light-beige);
+}
+
+.scroll-item:hover {
+  transform: scale(1.05); 
+}
+
+.scroll-btn {
+  background-color: var(--dark-navy); 
+  color: var(--light-beige); 
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: #555; 
+  transform: scale(1.1); 
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 0.5rem; 
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #555; 
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: var(--light-beige);
 }

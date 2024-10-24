@@ -13,7 +13,8 @@ function ImageTextSection({title,text, buttonText, reverse,imgName}) {
                 <button>{buttonText}</button>
             </div>
         </section>
-    </> );
+    </> 
+    );
 }
 
 export default ImageTextSection;

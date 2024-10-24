@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 function ImageTextSection({title,text, buttonText, reverse,imgName}) {
     const imageSource = require(`../assets/${imgName}`);
@@ -10,7 +11,7 @@ function ImageTextSection({title,text, buttonText, reverse,imgName}) {
             <div className={`text-container ${reverse? '' : 'reverse'}`}>
                 <h2>{title}</h2>
                 <p>{text}</p>
-                <button>{buttonText}</button>
+                <Link to ="/session"><button>{buttonText}</button></Link>
             </div>
         </section>
     </> 

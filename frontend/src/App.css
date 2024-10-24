@@ -425,7 +425,7 @@ button {
   margin-bottom: 0.5rem;
 }
 
-.session-form input {
+.session-form input, .session-form select {
   padding: 0.7rem;
   margin-bottom: 1.5rem;
   border: 1px solid #ccc;

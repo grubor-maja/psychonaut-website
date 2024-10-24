@@ -46,9 +46,10 @@
   /* Variables for colors */
 
   --dark-navy: #282735;
-  --light-beige: #DFD9CD;
+  --light-beige: #ece7dc;
   --light-beige-hover: #a9a395;
   --mint-green: #8FD4BC;
+  --mint-green-hover: #5e9d8d;
   --blue-violet: #645FB0;
 
   /* Variables for fonts */
@@ -119,6 +120,10 @@ p {
   color: var(--dark-navy);
 }
 
+button {
+  font-family: var(--font-primary);
+}
+
 /* Header */
 
 /* Navbar */
@@ -171,4 +176,57 @@ p {
   margin: 0;
   font-size: var(--font-size-body);
   color: var(--light-beige);
+}
+
+/* ImageTextSection */
+
+.image-text-section {
+  display: flex;
+  align-items: center;
+  padding: 4rem 2.5rem;
+}
+
+.image-text-section.reverse{
+  flex-direction: row-reverse;
+}
+
+.image-container img {
+  width: 45rem;
+}
+
+.text-container {
+  margin-left: 2rem;
+  margin-right: 15rem;
+  text-align: left;
+  align-self: flex-start;
+  width: 40rem;
+  line-height: 1.6rem;
+}
+
+.text-container h2 {
+  font-size: var(--font-size-h2);
+  color: var(--dark-navy);
+  margin-bottom: 4rem;
+  
+} 
+
+.text-container p {
+  font-size: var(--font-size-body);
+  color: var(--dark-navy);
+  margin-bottom: 4rem;
+
+}
+
+.text-container button {
+  background-color: var(--mint-green);
+  color: var(#fff);
+  padding: 1rem 2rem;
+  font-size: var(--font-size-body);
+  border: none;
+  cursor: pointer;
+  transition:  0.3s ease-in-out; 
+}
+
+.text-container button:hover {
+  background-color: var(--mint-green-hover);
 }

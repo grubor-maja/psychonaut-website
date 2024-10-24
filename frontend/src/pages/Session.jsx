@@ -21,6 +21,9 @@ function Session() {
             <label>Pick a Date</label>
             <input type="date" />
 
+            <label>Preferred Time</label>
+            <input type="time" />
+
             <button type="submit">Book Session</button>
 
         </form>

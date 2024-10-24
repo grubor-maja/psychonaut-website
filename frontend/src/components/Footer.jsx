@@ -8,7 +8,7 @@ function Footer() {
                 <img src={logo} alt="Logo" />
             </div>
             <div className="footer-text">
-                <p>Terms & Conditions | All rights reserve</p>
+                <p>Terms & Conditions | All rights reserved.</p>
             </div>
         </footer>
     </> );

@@ -488,6 +488,7 @@ button {
     .navbar-links {
         flex-direction: column;
         gap: 1rem;
+        padding-left: 0;
     }
 
     .image-text-section {
@@ -647,13 +648,14 @@ button {
   .navbar-logo img {
       height: 3rem;
       margin-bottom: 1rem;
-      margin-left: 2rem;
+      margin-left: 0;
   }
 
   .navbar-links {
       flex-direction: column;
       gap: 1rem;
       text-align: center;
+      padding-left: 0;
   }
 
   .hero-section {

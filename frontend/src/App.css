@@ -119,6 +119,7 @@ p {
   color: var(--dark-navy);
 }
 
+/* Header */
 
 /* Navbar */
 
@@ -149,4 +150,25 @@ p {
 
 .navbar-links li a:hover {
   color: var(--light-beige-hover);
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: var(--dark-navy);
+  color: var(--light-beige);
+}
+
+.footer-logo img {
+  height: 4rem;
+}
+
+.footer-text p {
+  margin: 0;
+  font-size: var(--font-size-body);
+  color: var(--light-beige);
 }

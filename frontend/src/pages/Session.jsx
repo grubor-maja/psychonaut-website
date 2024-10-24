@@ -30,7 +30,7 @@ function Session() {
                     console.error("Error fetching sessions:", error);
                 });
         }
-    }, [date]);
+    }, [date, availableTimes]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

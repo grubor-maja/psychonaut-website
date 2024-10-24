@@ -1,14 +1,19 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-const connectDB = async() => {
-    try {
-        await mongoose.connect(process.env.MONGO_URI);
-        console.log('MongoDB Connected...');
-        
-    } catch (error) {
-        console.error('Database connection failed', error);
-        process.exit(1);
-    }
-}
+dotenv.config();
+
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect("mongodb+srv://majagrubor:Crazymgirl.7@cluster0.l62ab.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+    process.exit(1);
+  }
+};
 
 export default connectDB;

@@ -137,6 +137,13 @@ button {
   background-color: var(--dark-navy);
 }
 
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
 .navbar-logo img {
   height: 4.5rem;
 }
@@ -645,6 +652,22 @@ button {
       padding: 1rem;
   }
 
+  .menu-icon {
+    visibility: visible;
+    display: inline;
+  }
+
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-around;
+    gap: 10rem;
+  }
+
+  .burgermenu-image {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
   .navbar-logo img {
       height: 3rem;
       margin-bottom: 1rem;
@@ -656,10 +679,15 @@ button {
       gap: 1rem;
       text-align: center;
       padding-left: 0;
+      display: none;
+  }
+
+  .navbar-links.active {
+    display: flex;
   }
 
   .hero-section {
-      height: 60vh;
+      height: 88vh;
       padding: 1rem;
       text-align: center;
       background-position: top;

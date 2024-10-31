@@ -854,3 +854,22 @@ button {
       padding: 1.5rem 3rem;
   }
 }
+
+/* Animations */
+
+@keyframes colorChange {
+  0% {
+    color: var(--mint-green);
+  }
+  50% {
+    color: var(--blue-violet);
+  }
+  100% {
+    color: var(--mint-green);
+  }
+}
+
+.animated-word {
+  display: inline-block;
+  animation: colorChange 5s ease-in-out infinite;
+}

@@ -11,7 +11,7 @@ function ImageTextSection({title,text, buttonText, reverse,imgName}) {
             <div className={`text-container ${reverse? '' : 'reverse'}`}>
                 <h2>{title}</h2>
                 <p>{text}</p>
-                <Link to ="/session"><button>{buttonText}</button></Link>
+                <Link to ="/session"><button className='btn2'>{buttonText}</button></Link>
             </div>
         </section>
     </> 
